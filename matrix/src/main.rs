@@ -7,7 +7,7 @@ use std::{thread, time};
 
 fn main() {
 
-    let menu = ["1. Construir matiz","2. Introducir Matriz","3. Volcar Matriz", "4. Salir"];
+    let menu = ["---------- MENU ----------","1. Construir matiz","2. Introducir Matriz","3. Volcar Matriz", "4. Salir"];
     let mut repetir = true;
 
     let mut matriz:Vec<Vec<f32>> = Vec::new();
@@ -21,7 +21,7 @@ fn main() {
 
         let intro;
         
-        println!("Por favor, introduzca la Opción que Desee: ");
+        println!("\nPor favor, introduzca la Opción que Desee: ");
 
          intro = uint_input_consola();
 
@@ -57,13 +57,13 @@ fn main() {
             repetir = false;
             
         }else{
-            println!("\n POR FAVOR, introduzca un numero del 1 al 4");
+            println!("ERROR: introduzca un numero del 1 al 4\n");
         }
 
     }
 }
 
-fn int_input_consola() -> f32{
+fn float_input_consola() -> f32{
     let mut num = String::new();
     io::stdin()
         .read_line(&mut num)
@@ -103,7 +103,7 @@ fn introducir_datos_matriz(v:&mut Vec<Vec<f32>>){
 
             let num:f32;
             println!("\nIntroduzca el valor de v[{}][{}]: ",i,j);
-            num = int_input_consola();
+            num = float_input_consola();
 
             v[i][j] = num;
         }
