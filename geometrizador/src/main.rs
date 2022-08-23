@@ -3,9 +3,7 @@
     ?de cualquier tamaño que el cliente desee
     ?Y que permita calcular su area y perimetro
 */
-
-//TODO: Pulir el codigo y considerar que el numero de lados tiene que se mayor o igual a 5 en los poligonos.
-
+//TODO: Pulir el codigo
 mod declaraciones;
 
 use std::io;
@@ -16,7 +14,6 @@ use crate::declaraciones::Triangulo;
 use crate::declaraciones::Poligono;
 use crate::declaraciones::Area;
 use crate::declaraciones::Perimetro;
-
 
 fn main(){
     let menu = ["---------- MENU ----------","1. Crear un Cuadrado","2. Crear un Rectangulo","3. Crear un Circulo","4. Crear Triangulo","5. Crear Poligono","6. Salir"];
@@ -149,9 +146,11 @@ fn triangulo(){
 }
 
 fn poligono(){
-    let lad; let nlad;
-    println!("Introduzca el numero de lados que desea: ");
+    let lad; let mut nlad = 0;
+    while nlad < 5 {
+    println!("Introduzca el numero de lados que desea (minimo 5): ");
     nlad = uint_input_consola();
+    };
 
     println!("Introduzca el tamaño del lado (m): ");
     lad = float_input_consola();
