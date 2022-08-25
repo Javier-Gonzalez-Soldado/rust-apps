@@ -9,6 +9,7 @@
  * - Ejemplo. Entrada: [("R","S"), ("S","R"), ("P","S")]. Resultado: "Player 2".
  */
 
+ //TODO: Posible mejora, que se pueda elegir desde consola e implementar el modo 1 solo jugador.
 fn main() {
     game([('R','S'),('S','R'),('P','S')]);
     game([('P','R'),('S','P'),('R','S')]);
